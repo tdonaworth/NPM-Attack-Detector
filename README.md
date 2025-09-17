@@ -3,13 +3,13 @@
 This tool helps detect whether your project is affected by the recent **npm supply chain attack** that compromised multiple popular packages (`chalk`, `debug`, `strip-ansi`, etc.).  
 It scans your project for **known malicious versions** as well as suspicious **obfuscated code patterns** that may indicate compromise.
 
-## 🚨 Background
+## Background
 A number of popular npm packages were compromised and republished with malicious code designed to **intercept cryptocurrency transactions** and exfiltrate sensitive data.  
 Anyone installing these versions may have been exposed accidentally. This detector provides a quick way to audit your environment.
 
 ---
 
-## 📦 Features
+## Features
 - Detects **known malicious versions** of compromised packages.  
 - Scans **package.json** and **package-lock.json** for suspicious dependencies.  
 - Searches installed code for **obfuscation / malicious behavior signatures**.  
@@ -20,7 +20,7 @@ Anyone installing these versions may have been exposed accidentally. This detect
 
 ---
 
-## 🔧 Installation
+## Installation
 Clone or download the repository and place the detector in your project root.
 
 Requirements:
@@ -28,7 +28,7 @@ Requirements:
 
 ---
 
-## ▶️ Usage
+## Usage
 Run the provided helper script depending on your system:
 
 ### On macOS / Linux
@@ -49,7 +49,7 @@ python3 npm_attack_detector.py
 
 ---
 
-## 📋 Output
+## Output
 - Generates a **detection report** showing:
   - Compromised package versions found  
   - Obfuscated malicious patterns detected  
@@ -64,7 +64,7 @@ Example output:
 
 ---
 
-## 🚑 What to Do if Compromised
+## What to Do if Compromised
 If the report shows **CRITICAL** or **HIGH severity findings**:
 1. **Immediately disconnect** the affected system from the internet  
 2. **Uninstall compromised packages** from `node_modules` and lockfiles  
